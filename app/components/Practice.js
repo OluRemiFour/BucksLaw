@@ -4,8 +4,8 @@ import React from "react";
 function Practice() {
   return (
     <div className="bg-[var(--secondary-light)] md:px-24 px-8 pt-14">
-      <div className="mt-14">
-        <div className="text-[var(--dark-color)] items-center mt-20">
+      <div className="md:mt-14">
+        <div className="text-[var(--dark-color)] items-center md:mt-20 mt-10">
           <div className="flex justify-center text-center flex-col items-center space-y-3">
             <h1 className="md:text-[40px] text-[36px] md:w-[40%] font-bold">
               We’re Advocates for Justice and Right
