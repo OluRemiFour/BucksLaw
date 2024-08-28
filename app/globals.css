@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "EBGaramond";
+  src: url("/font/EBGaramond-Medium.ttf") format("truetype");
+  font-style: normal;
+}
+
+* {
+  font-family: "EBGaramond";
+}
+
+:root {
+  --primary-color-light: #1a3e5c;
+  --secondary-light: #e2e2dc;
+  --secondary: #d8d8d2;
+  --secondary-color-light: #d8d8d2;
+  --background-color-light: #f7f7f7;
+  --text-color-light: #333333;
+  --accent-color-light: #e0e0e0;
+  --nav-color-light: #a67d3d;
+
+  --primary-color-dark: #29415e;
+  --brown-color: #a67d3d;
+  --dark-color: var(--background-color-dark);
+  --secondary-color-dark: #f4f4ee;
+  --background-color-dark: #121b27;
+  --text-color-dark: #e0e0e0;
+  --nav-color-dark: #121b27;
+  --accent-color-dark: #4a4a4a;
+}
+
+.light-mode {
+  --primary-color: var(--primary-color-light);
+  --secondary-color: var(--secondary-color-light);
+  --background-color: var(--background-color-light);
+  --text-color: var(--text-color-light);
+  --accent-color: var(--accent-color-light);
+  --nav-color: var(--nav-color-light);
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.dark-mode {
+  --primary-color: var(--primary-color-dark);
+  --secondary-color: var(--secondary-color-dark);
+  --background-color: var(--background-color-dark);
+  --text-color: var(--text-color-dark);
+  --nav-color: var(--nav-color-dark);
+  --accent-color: var(--accent-color-dark);
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+nav {
+  background-color: var(--nav-color);
+  transition: background-color 0.3s ease;
+}
+.carousel {
+  width: 100%; /* Set the width of the carousel container */
+  overflow: hidden; /* Hide the overflow to only show the visible part of the track */
+}
+
+.carousel-track {
+  display: flex;
+  width: 100%;
+  margin: 0 30px;
+  animation: scroll 20s linear infinite; /* Adjust the duration to control speed */
+}
+
+.carousel-image {
+  width: 10%;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
